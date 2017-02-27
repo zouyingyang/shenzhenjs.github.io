@@ -13,22 +13,23 @@
     
     
     
-    <title>Archives: 2017/2 | 深圳前端交流群 - 247687975 | 前端联盟深圳地区唯一官方网站</title>
+    <title>英雄榜 | 深圳前端交流群 - 247687975 | 前端联盟深圳地区唯一官方网站</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
     <meta name="theme-color" content="#3F51B5">
     
     
     <meta name="keywords" content="undefined">
-    <meta name="description" content="深圳前端交流群是深圳地区浏览量最大的中文前端门户网站，是由深圳前端从业人员发起，为深圳数以万计的互联网用户提供富有创意的前端新生活。">
+    <meta name="description" content="英雄榜">
 <meta property="og:type" content="website">
-<meta property="og:title" content="深圳前端交流群 - 247687975">
-<meta property="og:url" content="http://shenzhenjs.com/archives/2017/02/index.html">
+<meta property="og:title" content="英雄榜">
+<meta property="og:url" content="http://shenzhenjs.com/about/index.html">
 <meta property="og:site_name" content="深圳前端交流群 - 247687975">
-<meta property="og:description" content="深圳前端交流群是深圳地区浏览量最大的中文前端门户网站，是由深圳前端从业人员发起，为深圳数以万计的互联网用户提供富有创意的前端新生活。">
+<meta property="og:description" content="英雄榜">
+<meta property="og:updated_time" content="2017-02-27T13:49:02.644Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="深圳前端交流群 - 247687975">
-<meta name="twitter:description" content="深圳前端交流群是深圳地区浏览量最大的中文前端门户网站，是由深圳前端从业人员发起，为深圳数以万计的互联网用户提供富有创意的前端新生活。">
+<meta name="twitter:title" content="英雄榜">
+<meta name="twitter:description" content="英雄榜">
     
         <link rel="alternative" href="/atom.xml" title="深圳前端交流群 - 247687975" type="application/atom+xml">
     
@@ -38,9 +39,9 @@
 </head>
 
 <body>
-    <div id="loading" class="active"></div>
+<div id="loading" class="active"></div>
 
-    <aside id="menu"  >
+<aside id="menu"  >
   <div class="inner flex-row-vertical">
     <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
         <i class="icon icon-lg icon-close"></i>
@@ -66,14 +67,14 @@
               </a>
             </li>
         
-            <li class="waves-block waves-effect active">
+            <li class="waves-block waves-effect">
               <a href="/archives"  >
                 <i class="icon icon-lg icon-archives"></i>
                 Archives
               </a>
             </li>
         
-            <li class="waves-block waves-effect">
+            <li class="waves-block waves-effect active">
               <a href="/about"  >
                 <i class="icon icon-lg icon-英雄榜"></i>
                 英雄榜
@@ -106,13 +107,13 @@
   </div>
 </aside>
 
-    <main id="main">
-        <header class="top-header" id="header">
+<main id="main">
+    <header class="top-header" id="header">
     <div class="flex-row">
         <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
           <i class="icon icon-lg icon-navicon"></i>
         </a>
-        <div class="flex-col header-title ellipsis">Archives</div>
+        <div class="flex-col header-title ellipsis">英雄榜</div>
         
         <div class="search-wrap" id="search-wrap">
             <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
@@ -134,7 +135,7 @@
 <header class="content-header archives-header">
 
     <div class="container fade-scale">
-        <h1 class="title">Archives</h1>
+        <h1 class="title">英雄榜</h1>
         <h5 class="subtitle">
             
         </h5>
@@ -144,46 +145,46 @@
 
 </header>
 
-<div class="container body-wrap fade">
-    
-
-    
-            
-            <h3 class="archive-separator">February, 2017</h3>
-            <div class="waterfall">
-    
-
-        <div class="waterfall-item">
-  <article class="article-card archive-article">
-    <div class="post-meta">
-      <time class="post-time" title="2017年02月21日 22:15" datetime="2017-02-21T14:15:17.681Z"  itemprop="datePublished">Feb 21</time>
-
-      
-
-
-    </div>
-    
-
-
-  
-    <h3 class="post-title" itemprop="name">
-      <a class="post-title-link" href="/2017/02/21/hello/">Hello 深圳</a>
-    </h3>
-  
-
-
-
-    
-  </article>
+    <link rel="stylesheet" type="text/css" href="/css/my/common.css">
+<div class="article-row">
+    <article class="article article-summary">
+        <div class="article-summary-inner">
+            <div id="app" class="article-city">
+                <div class="article-item">
+                    <div class="article-city-title">
+                        <h1>英雄榜</h1>
+                    </div>
+                    <div class="article-city-inner">
+                        <all-user-list :all-user-info="shenzhen"></all-user-list>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
 </div>
-
-    
-    </div>
-
-    
-</div>
-
-        <footer class="footer">
+<script id="tpl-user-list">
+    var tplUserList =
+        `<ol class="user-list clearfix" >
+            <li v-for="(item, index) in allUserInfo">
+                <div class="user-title"><h2><em class="no" v-text="index+1">.</em><a :href="item.blog" target="_blank" v-text="item.name"></a></h2></div>
+                <div class="userinfo-content">
+                    <a class="userinfo-img" :href="item.blog" target="_blank"><img :src="item.avatar" alt=""></a>
+                    <div class="desc">
+                        <dl class="desc-info">
+                            <dd><a :href="item.blog" target="_blank">博客</a></dd>
+                            <dd><a :href="item.github" target="_blank">Github</a></dd>
+                            <dd><a :href="item.website" target="_blank">个人站点</a></dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="useinfo-word"><p class="sub" :title="item.word" v-text="item.word"></p></div>
+            </li>
+        </ol>`
+</script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/vue.min.js"></script>
+<script src="/js/my/about.js"></script>
+    <footer class="footer">
     <div class="top">
         
 <p>
@@ -209,8 +210,8 @@
     </div>
 </footer>
 
-    </main>
-    <div class="mask" id="mask"></div>
+</main>
+<div class="mask" id="mask"></div>
 <a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
 
 
@@ -218,7 +219,7 @@
 <div class="global-share" id="globalShare">
     <ul class="reset share-icons">
       <li>
-        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://shenzhenjs.com/archives/2017/02/&title=深圳前端交流群 - 247687975&pic=http://shenzhenjs.com/img/avatar.jpg" data-title="微博">
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://shenzhenjs.com/about/&title=《英雄榜》 — 深圳前端交流群 - 247687975&pic=http://shenzhenjs.com/img/avatar.jpg" data-title="微博">
           <i class="icon icon-weibo"></i>
         </a>
       </li>
@@ -228,22 +229,22 @@
         </a>
       </li>
       <li>
-        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://shenzhenjs.com/archives/2017/02/&title=深圳前端交流群 - 247687975&source=深圳前端交流群是深圳地区浏览量最大的中文前端门户网站，是由深圳前端从业人员发起，为深圳数以万计的互联网用户提供富有创意的前端新生活。" data-title=" QQ">
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://shenzhenjs.com/about/&title=《英雄榜》 — 深圳前端交流群 - 247687975&source=深圳前端交流群是深圳地区浏览量最大的中文前端门户网站，是由深圳前端从业人员发起，为深圳数以万计的互联网用户提供富有创意的前端新生活。" data-title=" QQ">
           <i class="icon icon-qq"></i>
         </a>
       </li>
       <li>
-        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://shenzhenjs.com/archives/2017/02/" data-title=" Facebook">
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://shenzhenjs.com/about/" data-title=" Facebook">
           <i class="icon icon-facebook"></i>
         </a>
       </li>
       <li>
-        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=深圳前端交流群 - 247687975&url=http://shenzhenjs.com/archives/2017/02/&via=http://shenzhenjs.com" data-title=" Twitter">
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《英雄榜》 — 深圳前端交流群 - 247687975&url=http://shenzhenjs.com/about/&via=http://shenzhenjs.com" data-title=" Twitter">
           <i class="icon icon-twitter"></i>
         </a>
       </li>
       <li>
-        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://shenzhenjs.com/archives/2017/02/" data-title=" Google+">
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://shenzhenjs.com/about/" data-title=" Google+">
           <i class="icon icon-google-plus"></i>
         </a>
       </li>
@@ -254,13 +255,13 @@
 <div class="page-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://shenzhenjs.com/archives/2017/02/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://shenzhenjs.com/about/" alt="微信分享二维码">
 </div>
 
 
 
 
-    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
 <script>
 var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 
@@ -300,3 +301,4 @@ var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
 
 </body>
 </html>
+
